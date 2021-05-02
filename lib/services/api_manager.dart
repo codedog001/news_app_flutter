@@ -8,7 +8,7 @@ import '../constants/strings.dart';
 class API_manager {
   Future<NewsModels> getNews() async {
     var client = http.Client();
-    var newsModel = null;
+    var newsModels = null;
 
     try {
       var response = await client.get(Uri.parse(Strings.newsUrl));
@@ -21,10 +21,11 @@ class API_manager {
         var jsonMap = json.decode(jsonString);
 
         //Use factory method to get newsModel
-        var newsModel = NewsModels.fromJson(jsonMap);
+        newsModels = NewsModels.fromJson(jsonMap);
       }
     } catch (e) {
-      return newsModel;
+      return newsModels;
     }
+    return newsModels;
   }
 }

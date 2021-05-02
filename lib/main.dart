@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pp_news_app_api/pages/details.dart';
 import 'package:pp_news_app_api/pages/homepage.dart';
 
 void main() {
@@ -12,6 +13,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(primarySwatch: Colors.blue),
       home: HomePage(),
+      routes: {
+        NewsDetail.routeName: (ctx) => NewsDetail(),
+      },
     );
   }
 }
