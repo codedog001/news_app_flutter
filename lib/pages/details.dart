@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 
 class NewsDetail extends StatefulWidget {
-  static const routeName = '/detail-screen';
-  String articleTitle;
-  String articleImage;
-  String articleDesc;
+  final String articleTitle;
+  final String articleImage;
+  final String articleDesc;
 
   NewsDetail(
       {@required this.articleDesc,

@@ -45,36 +45,39 @@ class _HomePageState extends State<HomePage> {
                       height: 90,
                       color: Colors.grey,
                       child: Card(
-                        child: ListTile(
-                          leading: Padding(
-                            padding: EdgeInsets.only(left: 5),
-                            child: Container(
-                              // color: Colors.red,
-                              width: 100,
-                              height: 180,
-                              child: Card(
-                                elevation: 2,
-                                clipBehavior: Clip.hardEdge,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(3),
-                                ),
-                                child: Image.network(
-                                  article.urlToImage,
-                                  fit: BoxFit.cover,
+                        child: Padding(
+                          padding: const EdgeInsets.fromLTRB(5, 0, 5, 0),
+                          child: ListTile(
+                            leading: Padding(
+                              padding: EdgeInsets.only(left: 5),
+                              child: Container(
+                                // color: Colors.red,
+                                width: 100,
+                                height: 180,
+                                child: Card(
+                                  elevation: 2,
+                                  clipBehavior: Clip.hardEdge,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(3),
+                                  ),
+                                  child: Image.network(
+                                    article.urlToImage,
+                                    fit: BoxFit.cover,
+                                  ),
                                 ),
                               ),
                             ),
-                          ),
-                          title: Text(
-                            article.title,
-                            overflow: TextOverflow.ellipsis,
-                          ),
-                          contentPadding: EdgeInsets.all(2),
-                          minVerticalPadding: 10,
-                          subtitle: Text(
-                            article.description,
-                            overflow: TextOverflow.ellipsis,
-                            maxLines: 2,
+                            title: Text(
+                              article.title,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                            contentPadding: EdgeInsets.all(2),
+                            minVerticalPadding: 10,
+                            subtitle: Text(
+                              article.description,
+                              overflow: TextOverflow.ellipsis,
+                              maxLines: 2,
+                            ),
                           ),
                         ),
                       )),
